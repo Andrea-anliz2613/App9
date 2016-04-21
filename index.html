@@ -123,6 +123,37 @@
  </head>
 
  <body>
+  
+  <!-- insert intro page --> 
+     <div data-role="page" id="pageone"> <!-- added id -->
+     	<div data-role="main" class="ui-content"><!--/div--> <!-- added for margin -->
+	<div data-role="header"> 
+		<h1>Could you have Zika?</h1> <!-- changed name again -->
+	</div><!-- /header -->
+	<div data-role="content">	
+		<p>Zika Virus?p>	<!-- changed name -->
+	
+	<!-- adding question --> 
+	<div data-role="content">
+	     <p>This app is supposed to assist with the detection of fluorescence in a picture uploaded. The fluorescence will appear in the color blue and this app will determine whether it is a significant enough amount.</p>
+	     	 <a href="#pagetwo" onclick="gonAdd();" data-role="button">Yes</a> <!-- added reference to page two; shortened; added #; added space -->
+	     <a href="#pagetwo" onclick="notgonAdd();" data-role="button">No</a> <!-- added no button; shortened; backspace; added #; added space   -->
+	</div>
+	
+	<!-- adding button --> 
+	<!-- a href="#pagetwo" data-role="button">Go to Page Two</a commented out-->
+	</div> <!-- added ending --> 
+	<!--a href= "#pageone" data-role="button">Start over?</a> <! - - added start over button commented out; added space--> 
+		<a href="#pageone" onclick="refreshPage();" data-role="button">Start over</a> <!-- deleted .; added refreshPage; deleted ?; deleted space; deleted space after a href; added space -->
+	</div><!-- /content -->
+	<!--div data-role="footer" data-position="fixed"> <!-- changed footer; changed indentation; tabbed -->
+	<footer>
+	   <p>Click above to start over</p> <!-- added space --> 		
+	</footer>
+	   <!--p>Click above to start over</p> <!-- added space; commented out --> 
+	</div><!-- /footer -->
+     </div><!-- /page -->
+  
   <div data-role="page">
     <div data-role="header">
     <h1>Primary Colors</h1></div><!-- /header -->
@@ -148,5 +179,7 @@
       <p>DIY Diagnostics</p>
     </div><!-- /footer -->
   </div><!-- /page -->
+  
+  
  </body>
 </html>
