@@ -101,8 +101,13 @@
           /*  ++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
           /* PUT ANY CHANGES TO THE JAVASCRIPT HERE  */
-          
-          
+          //moved function init here 
+          function init() {
+	  // Get a reference to our touch-sensitive element
+  		var touchzone = document.getElementById("myCanvas"); //changed to myCanvas; changed to touchzone
+  	  // Add an event handler for the touchstart event
+  		touchzone.addEventListener("touchstart", touchHandler, false);
+	  }
           
           
         } // end of img.onload
@@ -122,12 +127,12 @@
  
  //adding function 
  
-function init() {
+//function init() {
   // Get a reference to our touch-sensitive element
-  var touchzone = document.getElementById("myCanvas"); //changed to myCanvas; changed to touchzone
+ // var touchzone = document.getElementById("myCanvas"); //changed to myCanvas; changed to touchzone
   // Add an event handler for the touchstart event
-  touchzone.addEventListener("touchstart", touchHandler, false);
-}
+  //touchzone.addEventListener("touchstart", touchHandler, false);
+//}
 
 //added second function changed to match homeandlearn tutorial 
 
