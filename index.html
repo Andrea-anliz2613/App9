@@ -109,6 +109,8 @@
 			  		var touchzone = document.getElementById("myCanvas"); //changed to myCanvas; changed to touchzone
 			  	  // Add an event handler for the touchstart event
 			  		touchzone.addEventListener("touchstart", touchHandler, false);
+			  	// Add an event handler for the click event
+			  		touchzone.addEventListener("click", clickHandler, false);
 			  	 // Adding var for array 
 				  }
 				  //added function touchHandler up here; added alert; commented out alert ("X...")
@@ -118,6 +120,14 @@
 					canvas_y = event.targetTouches[0].pageY;
 					//alert("X=" + canvas_x + "Y=" + canvas_y);
 					alert(context.getImageData(event.offsetX, event.offsetY, 1, 1).data);
+				}
+				//added clickHandler 
+			function clickHandler(event) {
+					event.preventDefault();
+					canvas_x = event.targetTouches[0].pageX;
+					canvas_y = event.targetTouches[0].pageY;
+					//alert("X=" + canvas_x + "Y=" + canvas_y);
+					console.log(context.getImageData(event.offsetX, event.offsetY, 1, 1).data);
 				}
 				//added init onload 
 			  init(); 
