@@ -105,23 +105,25 @@
           /* PUT ANY CHANGES TO THE JAVASCRIPT HERE  */
           //moved function init here 
           function init() {
-	  // Get a reference to our touch-sensitive element
-  		var touchzone = document.getElementById("myCanvas"); //changed to myCanvas; changed to touchzone
-  	  // Add an event handler for the touchstart event
-  		touchzone.addEventListener("touchstart", touchHandler, false);
-	  }
-	  //added function touchHandler up here 
-        function touchHandler(event) {
-		event.preventDefault();
-	
-		canvas_x = event.targetTouches[0].pageX;
-		canvas_y = event.targetTouches[0].pageY;
-		alert("X=" + canvas_x + "Y=" + canvas_y);
-	}
-	//added init onload 
-          init(); 
-          
-        } // end of img.onload
+				  // Get a reference to our touch-sensitive element
+			  		var touchzone = document.getElementById("myCanvas"); //changed to myCanvas; changed to touchzone
+			  	  // Add an event handler for the touchstart event
+			  		touchzone.addEventListener("touchstart", touchHandler, false);
+			  	 // Adding var for array 
+				  }
+				  //added function touchHandler up here; added alert 
+			  function touchHandler(event) {
+					event.preventDefault();
+					canvas_x = event.targetTouches[0].pageX;
+					canvas_y = event.targetTouches[0].pageY;
+					alert("X=" + canvas_x + "Y=" + canvas_y);
+					alert(context.getImageData(event.offsetX, event.offsetY, 1, 1).data);
+				}
+				//added init onload 
+			  init(); 
+			          
+			         
+			} // end of img.onload
         
         img.src = reader.result;
       } //  end of reader.onload
@@ -208,6 +210,7 @@
       <script> /* This script initiates the cavas and puts the text on the canvas "myCanvas" */
         var canvas = document.getElementById('myCanvas');
         var context = canvas.getContext("2d");
+        
         context.font = '20pt Calibri';
         context.fillStyle = "black";
         context.fillText("Original image will go here", 10, 20);
