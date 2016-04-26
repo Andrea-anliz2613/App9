@@ -111,12 +111,12 @@
 			  		touchzone.addEventListener("touchstart", touchHandler, false);
 			  	 // Adding var for array 
 				  }
-				  //added function touchHandler up here; added alert 
+				  //added function touchHandler up here; added alert; commented out alert ("X...")
 			  function touchHandler(event) {
 					event.preventDefault();
 					canvas_x = event.targetTouches[0].pageX;
 					canvas_y = event.targetTouches[0].pageY;
-					alert("X=" + canvas_x + "Y=" + canvas_y);
+					//alert("X=" + canvas_x + "Y=" + canvas_y);
 					alert(context.getImageData(event.offsetX, event.offsetY, 1, 1).data);
 				}
 				//added init onload 
