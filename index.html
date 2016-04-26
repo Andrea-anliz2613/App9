@@ -121,11 +121,11 @@
 					//alert("X=" + canvas_x + "Y=" + canvas_y);
 					alert(context.getImageData(event.offsetX, event.offsetY, 1, 1).data);
 				}
-				//added clickHandler 
+				//added clickHandler; changed canvas_x and canvas_y
 			function clickHandler(event) {
 					event.preventDefault();
-					canvas_x = event.targetTouches[0].pageX;
-					canvas_y = event.targetTouches[0].pageY;
+					canvas_x = event.clientX;
+					canvas_y = event.clientY;
 					//alert("X=" + canvas_x + "Y=" + canvas_y);
 					console.log(context.getImageData(event.offsetX, event.offsetY, 1, 1).data);
 				}
