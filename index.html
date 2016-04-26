@@ -118,6 +118,8 @@
 		canvas_y = event.targetTouches[0].pageY;
 		alert("X=" + canvas_x + "Y=" + canvas_y);
 	}
+	//added init onload 
+          init(); 
           
         } // end of img.onload
         
@@ -156,7 +158,7 @@
  </script>
  </head>
 
- <body onload="init()"> <!-- added onload -->
+ <body> <!-- added onload; moved onload-->
   
   <!-- insert intro page --> 
      <div data-role="page" id="pageone"> <!-- added id -->
