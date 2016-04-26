@@ -121,13 +121,15 @@
 					//alert("X=" + canvas_x + "Y=" + canvas_y);
 					alert(context.getImageData(event.offsetX, event.offsetY, 1, 1).data);
 				}
-				//added clickHandler; changed canvas_x and canvas_y
+				//added clickHandler; changed canvas_x and canvas_y; added subarray 
 			function clickHandler(event) {
 					event.preventDefault();
 					canvas_x = event.clientX;
 					canvas_y = event.clientY;
 					//alert("X=" + canvas_x + "Y=" + canvas_y);
-					console.log(context.getImageData(event.offsetX, event.offsetY, 1, 1).data);
+					var color = context.getImageData(event.offsetX, event.offsetY, 1, 1).data.slice(0,3);
+					console.log(color);
+					
 				}
 				//added init onload 
 			  init(); 
