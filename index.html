@@ -123,16 +123,16 @@
 					alert(context.getImageData(X1, Y1, 5 , 5); //added alert 
 				}
 				//added clickHandler; changed canvas_x and canvas_y; added subarray 
-			function clickHandler(event) {
-					event.preventDefault();
-					canvas_x = event.clientX;
-					canvas_y = event.clientY;
-					//alert("X=" + canvas_x + "Y=" + canvas_y);
-					var color = context.getImageData(event.offsetX, event.offsetY, 1, 1).data.slice(0,3);
-					console.log(color);
+			//function clickHandler(event) {
+				//	event.preventDefault();
+				//	canvas_x = event.clientX;
+				//	canvas_y = event.clientY;
+				//	//alert("X=" + canvas_x + "Y=" + canvas_y);
+				//	var color = context.getImageData(event.offsetX, event.offsetY, 1, 1).data.slice(0,3);
+				//	console.log(color);
 					
-				}
-				//added init onload 
+			//	}
+				//added init onload took out 
 			  init(); 
 			          
 			         
