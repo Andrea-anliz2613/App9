@@ -119,7 +119,8 @@
 					canvas_x = event.targetTouches[0].pageX;
 					canvas_y = event.targetTouches[0].pageY;
 					//alert("X=" + canvas_x + "Y=" + canvas_y);
-					alert(context.getImageData(event.offsetX, event.offsetY, 1, 1).data);
+				//	alert(context.getImageData(event.offsetX, event.offsetY, 1, 1).data);
+					alert(context.getImageData(X1, Y1, 5 , 5); //added alert 
 				}
 				//added clickHandler; changed canvas_x and canvas_y; added subarray 
 			function clickHandler(event) {
