@@ -134,8 +134,25 @@
 				//	console.log(color);
 					
 			//	}
-				//added init onload took out 
-			  init(); 
+				//added init onload took out; added for loop 
+			  init()
+			  var red = 0
+			  
+			  var green = 0 
+			   
+			  var blue = 0 
+			  
+			   for ( var i = 0; i < data.length; i += 4) {
+           
+           red += data [i] = 0;
+           
+           green += data [i + 1]; 
+           
+           blue += data [i + 2] = 0; 
+           
+          }
+          
+          //context.getImageData (img, 0, 0);
 			          
 			         
 			} // end of img.onload
@@ -253,9 +270,9 @@
     <div data-role="header">
     <h1>Zika Virus</h1></div><!-- /header; changed name -->
     <div data-role="content">	
-      <h2>Push button to take picture.</h2>
+      <h2>Results.</h2>
       <div>
-        Press orange button to create or choose image file:
+       <!-- Press orange button to create or choose image file:
         <input type="file" id="fileInput" STYLE="background-color: #FF6600;">
       </div>
       <div id="messageDisplayArea"></div>
@@ -264,23 +281,21 @@
       <div id ="coords"></div>
       <div id="touchzone"></div>
       
-      <canvas id="myCanvas" width=600 height=500 style="border:1px solid #d3d3d3;"></canvas>
+      <table style="width:100%">
+	 <tr>
+    	<td>Red</td>
+    	<!--td>Smith</td --> 
+    	<td></td>
+   </tr>
+   <tr>
+    	<td>Eve</td>
+    	<td>Jackson</td> 
+    	<td>94</td>
+   </tr>
+			</table>
+
       <script> /* This script initiates the cavas and puts the text on the canvas "myCanvas" */
-        var canvas = document.getElementById('myCanvas');
-        var context = canvas.getContext("2d");
-        
-        context.font = '20pt Calibri';
-        context.fillStyle = "black";
-        context.fillText("Original image will go here", 10, 20);
-        
-   //moved function touchHandler; commented out 
-        //function touchHandler(event) {
-//	event.preventDefault();
-	
-//	canvas_x = event.targetTouches[0].pageX;
-//	canvas_y = event.targetTouches[0].pageY;
-//	alert("X=" + canvas_x + "Y=" + canvas_y);
-//	}
+
         
       </script>
 
