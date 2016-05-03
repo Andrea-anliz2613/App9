@@ -106,7 +106,11 @@
           //moved function init here 
           function init() {
 				  // Get a reference to our touch-sensitive element
-			  		var touchzone = document.getElementById("myCanvas"); //changed to myCanvas; changed to touchzone
+			  		var touchzone = document.getElementById("myCanvas"); //changed to myCanvas; changed to touchzone; added document.getElement
+			  		var red = document.getElementById("red");
+			  		var green = document.getElementById("green");
+			  		var blue = document.getElementById("blue");
+			  		
 			  	  // Add an event handler for the touchstart event
 			  		touchzone.addEventListener("touchstart", touchHandler, false);
 			  	// Add an event handler for the click event
